@@ -1,0 +1,83 @@
+<div style="padding-left: 20%;padding-right: 20%;">
+<div class="card" style="width: 60rem;">
+    <div class="card-body">
+      <h5 class="card-title">Quiz</h5>
+      <div style="padding: 5%;">
+        <form [formGroup]="form" (ngSubmit)="Submit()" >
+        <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" formControlName="Title" placeholder="Title" >
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" formControlName="Description" placeholder="Description" >
+            </div>
+        </div>
+            <br/>
+        <div>
+            <input class="form-control form-control-lg" type="text" formControlName="Question1"  placeholder="Question1">
+            <div class="form-check" style="padding-left: 3%;">
+                <input class="form-check-input" type="radio"  formControlName="flexRadioDefault" [value]="true" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  True
+                </label>
+              </div>
+              <div class="form-check" style="padding-left: 3%;">
+                <input class="form-check-input" type="radio" formControlName="flexRadioDefault" [value]="false" id="flexRadioDefault2" >
+                <label class="form-check-label" for="flexRadioDefault2">
+                  False
+                </label>
+              </div>
+        </div>
+            <br/>
+        <div>
+            <input class="form-control form-control-lg" type="text" formControlName="Question2" placeholder="Question2">
+            <br/>
+            <div style="padding-left: 3%; padding-right: 50%; padding-bottom: 1%;">
+                <input class="form-control form-control-sm" type="text" formControlName="CorrectAnswer" placeholder="CorrectAnswer">
+            </div>
+            <div style="padding-left: 3%; padding-right: 50%; padding-bottom: 1%;">
+                <input class="form-control form-control-sm" type="text" formControlName="Q2Option2" placeholder="Q2Option2">
+            </div>
+            <div style="padding-left: 3%; padding-right: 50%; padding-bottom: 1%;">
+                <input class="form-control form-control-sm" type="text" formControlName="Q2Option3" placeholder="Q2Option3">
+            </div>
+            <div style="padding-left: 3%; padding-right: 50%; padding-bottom: 1%;">
+                <input class="form-control form-control-sm" type="text" formControlName="Q2Option4" placeholder="Q2Option4">
+            </div>
+        </div>
+            <br/>
+        <div>
+            <input class="form-control form-control-lg" type="text" formControlName="Question3" placeholder="Question3">
+            <br/>
+            <div style="padding-left: 3%;  padding-bottom: 1%;">
+                <input class="form-check-input" type="checkbox"  [value]="false"  formControlName="Q3OptionA" >
+                <input type="text" class="col-sm-3"  formControlName="Q3Option1">
+            </div>
+            <div style="padding-left: 3%;  padding-bottom: 1%;">
+                <input class="form-check-input" type="checkbox"  [value]="false"  formControlName="Q3OptionB" >
+                <input type="text" class="col-sm-3"  formControlName="Q3Option2">
+            </div>
+            <div style="padding-left: 3%;  padding-bottom: 1%;">
+                <input class="form-check-input" type="checkbox"  [value]="false"  formControlName="Q3OptionC" >
+                <input type="text" class="col-sm-3"  formControlName="Q3Option3">
+            </div>
+            <div style="padding-left: 3%;  padding-bottom: 1%;">
+                <input class="form-check-input" type="checkbox"  [value]="false"  formControlName="Q3OptionD" >
+                <input type="text" class="col-sm-3"  formControlName="Q3Option4">
+            </div>
+            
+        </div>
+            <br/>
+        <div>
+            <input class="form-control form-control-lg" type="text" formControlName="Question4" placeholder="Question4">
+        </div>
+        <br/>
+        <div>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+        </div>
+    
+    </form>
+    </div>
+    </div>
+</div>
+</div>

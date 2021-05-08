@@ -1,0 +1,75 @@
+<div style="padding-left: 20%;padding-right: 20%;">
+    <input type="text" placeholder="search by id or title" [(ngModel)]="searchText">
+  <div class="card" style="width: 60rem;"  *ngFor="let data of myQuizData | search: searchText">
+        <style>
+         h5{
+             text-align: center;
+             font-size: xx-large;
+             font-weight: bold;
+         }
+         .title,.Description, .Q1, .Q2,.Q3,.Q4{
+          background-color:#39CCCC;
+          color: black;
+          border: 2px solid black;
+          margin: 20px;
+          padding: 15px;
+         }
+          </style>
+
+          <div class="card-body" >
+              <h5 class="card-title"><u>Take Quiz</u></h5>
+              <div class="title">Title:
+                {{data.Title}}
+              </div>
+              <div class= "Description">
+                  <p>{{data.Description}}</p>
+              </div>
+
+              <div class ="Q1">
+                <p>1.{{data.Question1}}</p>
+                 <input type="radio" id="Option1" value="Opt1">
+                 <label>True</label><br>
+                 <input type="radio" id="Option2" value="opt2">
+                 <label>False</label>
+             </div>
+
+             <div class ="Q2">
+              <p>2.{{data.Question2}}</p>
+              <input type="checkbox" id="CorrectAnswer" name="Q2opt1">
+              <label for="CorrectAnswer">{{data.CorrectAnswer}}</label><br>
+              <input type="checkbox" id="Q2Option2" name="Q2opt2">
+              <label for="Q2Option2">{{data.Q2Option2}}</label><br>
+              <input type="checkbox" id="Q2Option3" name="Q2opt3">
+              <label for="Q2Option3"> {{data.Q2Option3}}</label><br>
+              <input type="checkbox" id="Q2Option4" name="Q2opt4">
+              <label for="Q2Option4"> {{data.Q2Option4}}</label><br>
+             </div>
+
+
+
+              <div class ="Q3">
+                  <p>2.{{data.Question3}}</p>
+                  <input type="checkbox" id="Q3Option1" name="Q3opt1">
+                  <label for="Q3option1">{{data.Q3Option1}}</label><br>
+                  <input type="checkbox" id="Q3Option2" name="Q3opt2">
+                  <label for="Q3Option2">{{data.Q3Option2}}</label><br>
+                  <input type="checkbox" id="Q3Option3" name="Q3opt3">
+                  <label for="Q3Option3"> {{data.Q3Option3}}</label><br>
+                  <input type="checkbox" id="Q3Option4" name="Q3opt4">
+                  <label for="Q3Option4"> {{data.Q3Option4}}</label><br>
+              </div>
+
+
+
+              <div class ="Q4">
+                  <p>{{data.Question4}}</p>
+                  <div>
+                    <input class="form-control form-control-lg" type="text" placeholder="Type your answer">
+                </div>
+
+              </div>
+          </div>
+    </div>
+</div>
+
+
